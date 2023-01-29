@@ -1,27 +1,73 @@
-# AutofillForm
+# README.md Template
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+# CPS 595 - P1
 
-## Development server
+Source: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+University of Dayton
 
-## Code scaffolding
+Department of Computer Science
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+CPS 595 - P1, Spring 2023
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Instructor(s):
 
-## Running unit tests
+- Ahmed El Ouadrhiri
+- Dr. Phu Phung 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+##  Collaborating Project with Synchrony
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+# Auto-Fill Forms
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Team members
+
+1.  Charith Boddu , bodduc1@udayton.edu
+
+
+
+# Company Mentors
+
+Arpan Bhattacharya
+
+Synchrony
+
+
+
+# Project Management Information
+
+Management board (private access): https://trello.com/invite/b/xcmJlyKv/ATTIe130d895e86fa8207878de1f9ffdccb1E36CE1BC/project-autofill-forms
+
+Source code repository (private access): https://github.com/charith-B/Auto-fill-form.git
+
+
+
+# Overview
+
+AutoFill Forms
+Develop an autofill capability for a web page based on a scanned document. 
+The application should be allowed to access the camera to capture or extract key information from an uploaded document (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
+Any additional or unmapped fields should be made available for the user to manually enter.
+
+
+# Project Context and Scope
+
+We see similar functionalities on Different platforms either while uploading your credit card details or while verifing your ID verification on diffferent situations. 
+The functionality is mainly for user convinience where the system can automatically detect and upload data without any manual entry.
+
+# Environment Setup
+
+Install Node.js https://nodejs.org/en/download/
+
+Install VSCODE https://code.visualstudio.com/Download
+
+Then from terminal Install Angular CLI using command "npm install -g @angular/cli"
+
+Clone the project from the git repository from the link mentioned above
+
+install Node-modules using "npm install"
+
+Run the project using "Ng serve"
