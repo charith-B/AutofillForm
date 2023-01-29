@@ -1,0 +1,31 @@
+.container{
+    margin-top: 70px;
+  justify-content: center;
+}
+.card{
+    background-color: white;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.w3-button{
+    border: none;
+    outline: none;
+    background: #3f51b5;
+    color: white;
+}
+.input-group{
+    width: 100%;
+    margin: 10px;
+    align-items: baseline;
+    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  margin: 0; 
+}

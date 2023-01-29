@@ -1,0 +1,15 @@
+.container {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    background-color: #4169E1;
+    max-width: 100%;
+    
+  }
+  .img {
+    width: 3%;
+  }
+  .h4{
+    color: white;
+    float: left;
+  }

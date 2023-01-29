@@ -1,0 +1,13 @@
+.container{
+    margin-top: 70px;
+  justify-content: center;
+}
+.card{
+    background-color: white;
+}
+.w3-button{
+    border: none;
+    outline: none;
+    background: #3f51b5;
+    color: white;
+}

@@ -1,0 +1,46 @@
+<div class="container" style="align-items: center;">
+    <div class="card text-center" >
+        <div class="card-header">
+            <h3>AUTO-FILL FORMS</h3>
+        </div>
+        <div class="card-body " >
+          <form [formGroup]="CardForm" (ngSubmit)="onSubmit()" novalidate="novalidate">
+          <div class="input-group flex-nowrap">
+            <p style="font-weight: bold; ">Card number:&nbsp;&nbsp;</p> 
+            <input type="text" class="form-control" placeholder="**** **** **** ****" aria-label="Username" aria-describedby="addon-wrapping" formControlName="CardNumber">
+          </div>
+          <div *ngIf="CardForm.get('CardNumber')?.invalid && (CardForm.get('CardNumber')?.dirty || CardForm.get('CardNumber')?.touched)  ">
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.required "><span style="font-size: 12px; color: red;">Card Name is required.</span> </div>
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max Length for Card number is 16 digits</span> </div>
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.pattern"><span style="font-size: 12px; color: red;">Card number should only have numbers</span> </div>
+           </div>
+          <div class="input-group flex-nowrap">
+            <p style="font-weight: bold;">Name on the card:&nbsp;&nbsp;</p>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" formControlName="Name">
+          </div>
+          <div *ngIf="CardForm.get('Name')?.invalid && (CardForm.get('Name')?.dirty || CardForm.get('Name')?.touched)  ">
+            <div *ngIf="CardForm.get('Name')?.errors?.required "><span style="font-size: 12px; color: red;">Name is required.</span> </div>
+            </div>
+          <div class="input-group flex-nowrap">
+            <p style="font-weight: bold;">Valid thru:&nbsp;&nbsp;</p>
+            <input type="text" class="form-control" placeholder="MM/YY" aria-label="Username" aria-describedby="addon-wrapping" formControlName="ValidTill">
+          </div>
+          <div *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
+            <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid Thru date is required.</span> </div>
+            </div>
+          <div class="input-group flex-nowrap">
+            <p style="font-weight: bold;">CVV:&nbsp;&nbsp;</p>
+            <input type="text" class="form-control" placeholder="***" aria-label="Username" aria-describedby="addon-wrapping" formControlName="CVV">
+          </div>
+          <div *ngIf="CardForm.get('CVV')?.invalid && (CardForm.get('CVV')?.dirty || CardForm.get('CVV')?.touched)  ">
+            <div *ngIf="CardForm.get('CVV')?.errors?.required "><span style="font-size: 12px; color: red;">CVV is required.</span> </div>
+            <div *ngIf="CardForm.get('CVV')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max Length for CVV is 4 digits</span> </div>
+            <div *ngIf="CardForm.get('CVV')?.errors?.pattern"><span style="font-size: 12px; color: red;">CVV should only have numbers</span> </div>
+           </div>
+          <div>
+            <button class="w3-button w3-block " type="submit" [disabled]="CardForm.invalid"><i class='fas fa-angle-right'></i> Submit</button>
+          </div>
+        </form>
+        </div>
+      </div>
+  </div>
