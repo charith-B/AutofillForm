@@ -65,20 +65,23 @@ The functionality is mainly for user convinience where the system can automatica
 -->First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
 
 -->To verify proper installations Open terminal and type ===> npm -v
-	![Check npm version](src/assets/img/image-ref/check-npm-version.png )
+
+![Check npm version](src/assets/img/image-ref/check-npm-version.png )
 
 -->Next Install VSCODE using ==> https://code.visualstudio.com/Download
 
 -->Then open VSCODE and  from the VSCODE terminal Install Angular CLI using command "npm install -g @angular/cli"
-	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
+![Check npm version](src\assets\img\image-ref/check-npm-version.png )
 
 
 -->To verify proper installations in the terminal and type ==>ng v
-	![Check npm version]src\assets\img\(image-ref/check-npm-version.png )
+
+![Check npm version]src\assets\img\image-ref/check-npm-version.png )
 
 
 -->Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
-	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+![Check npm version](src\assets\img\image-ref/check-npm-version.png )
 
 
 -->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
