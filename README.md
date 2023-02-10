@@ -72,28 +72,28 @@ The functionality is mainly for user convinience where the system can automatica
 
 -->Then open VSCODE and  from the VSCODE terminal Install Angular CLI using command "npm install -g @angular/cli"
 
-![Check npm version](src/assets/img/image-ref/Angular-installation.png  )
+![Angular Install](src/assets/img/image-ref/Angular-installation.png  )
 
 
 -->To verify proper installations in the terminal and type ==>ng v
 
-![Check npm version]src/assets/img/image-ref/Angular-version.png  )
+![Angular version check](src/assets/img/image-ref/Angular-version.png  )
 
 
 -->Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
-![Check npm version](src/assets/img/image-ref/clone-project .png  )
+![Git clone](src/assets/img/image-ref/clone-project.png  )
 
 
 -->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
-	![Check npm version](src/assets/img/image-ref/npm-install.png  )
+![Npm Install](src/assets/img/image-ref/npm-install.png  )
 
 
 -->Then to run the project open new terminal in VScode and type==> "Ng serve"
-	![Check npm version](src/assets/img/image-ref/ng-serve.png  )
+![Ng serve](src/assets/img/image-ref/ng-serve.png  )
 
 
 -->This will execute the code and run the project hosting it in localhost with URL==> "http://localhost:4200/" using which we can access the project in any browser on the system.
-	![Check npm version](src/assets/img/image-ref/host-project.png  )
+![Hosting  project](src/assets/img/image-ref/host-project.png  )
 
 
 # Project files Descriptions:
@@ -126,12 +126,12 @@ The functionality is mainly for user convinience where the system can automatica
 
 Home component :
 			Initial page that is loaded when the project is hosted. Only has a continue button to redirect to the forms page
-	![Check npm version](src/assets/img/image-ref/home-component.png  )
+![Home component](src/assets/img/image-ref/home-component.png  )
 
 
 Forms component: 
 			The fields for the form are listed out here with vaidations. A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component. Another button for submitting the form values.
-	![Check npm version](src/assets/img/image-ref/Forms-component.png  )
+![Form component](src/assets/img/image-ref/Forms-component.png  )
 
                      
 Camera component: 
@@ -141,7 +141,7 @@ Camera component:
 
 Review component: 
 			In this page the user can review the form details for the last time before submitting the details.
-	![Check npm version](src/assets/img/image-ref/Review-component.png  )
+![Review component](src/assets/img/image-ref/Review-component.png  )
 
 
 
