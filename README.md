@@ -62,7 +62,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 # Environment Setup
 
-* First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
+* First step is to Install  Node.js  from the link  ===>   https://nodejs.org/en/download/
 
 * To verify proper installations Open terminal and type ===> npm -v
 
