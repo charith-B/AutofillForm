@@ -85,12 +85,10 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 -->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
-
 	![Check npm version](src/assets/img/image-ref/npm-install.png  )
 
 
 -->Then to run the project open new terminal in VScode and type==> "Ng serve"
-
 	![Check npm version](src/assets/img/image-ref/ng-serve.png  )
 
 
