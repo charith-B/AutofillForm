@@ -136,7 +136,7 @@ Forms component:
                      
 Camera component: 
 			This will redirect to a new window where the user can take a picture of the document to auto-fill the form. 
-	
+![Camera component](src/assets/img/image-ref/camera-component.png  )
 
 
 Review component: 
