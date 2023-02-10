@@ -162,6 +162,11 @@ The functionality is mainly for user convinience where the system can automatica
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
 
+#System Design
 
+Project UML diagram
+
+
+![UML Diagram](src/assets/img/UML-diagram.png  )
 
 
