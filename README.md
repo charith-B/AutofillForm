@@ -65,21 +65,33 @@ The functionality is mainly for user convinience where the system can automatica
 -->First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
 
 -->To verify proper installations Open terminal and type ===> npm -v
-	![Check npm version](image-ref/check-npm-version.png )
+	![Check npm version](src/assets/img/image-ref/check-npm-version.png )
 
 -->Next Install VSCODE using ==> https://code.visualstudio.com/Download
 
 -->Then open VSCODE and  from the VSCODE terminal Install Angular CLI using command "npm install -g @angular/cli"
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 -->To verify proper installations in the terminal and type ==>ng v
+	![Check npm version]src\assets\img\(image-ref/check-npm-version.png )
+
 
 -->Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 -->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 -->Then to run the project open new terminal in VScode and type==> "Ng serve"
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 -->This will execute the code and run the project hosting it in localhost with URL==> "http://localhost:4200/" using which we can access the project in any browser on the system.
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 # Project files Descriptions:
 
@@ -111,15 +123,23 @@ The functionality is mainly for user convinience where the system can automatica
 
 Home component :
 			Initial page that is loaded when the project is hosted. Only has a continue button to redirect to the forms page
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 Forms component: 
 			The fields for the form are listed out here with vaidations. A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component. Another button for submitting the form values.
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
                      
 Camera component: 
 			This will redirect to a new window where the user can take a picture of the document to auto-fill the form. 
+	
+
 
 Review component: 
 			In this page the user can review the form details for the last time before submitting the details.
+	![Check npm version](src\assets\img\image-ref/check-npm-version.png )
+
 
 
 
