@@ -164,7 +164,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 #System Design
 
-Project UML diagram
+* Project UML diagram
 
 
 ![UML Diagram](src/assets/img/UML-diagram.png  )
