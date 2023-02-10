@@ -3,11 +3,15 @@
         <div class="card-header">
             <h3>AUTO-FILL FORMS</h3>
         </div>
-        <div class="card-body " >
-          <form [formGroup]="CardForm" (ngSubmit)="onSubmit()" novalidate="novalidate">
+        <div class="card-body position-relative" >
+            <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;"> 
+              <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture()"><i class="fa fa-camera" aria-hidden="true"></i><br>Camera</button>
+            </div>
+         
+          <form [formGroup]="CardForm" (ngSubmit)="onSubmit(CardForm.value)" novalidate="novalidate">
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold; ">Card number:&nbsp;&nbsp;</p> 
-            <input type="text" class="form-control" placeholder="**** **** **** ****" aria-label="Username" aria-describedby="addon-wrapping" formControlName="CardNumber">
+            <input type="text" class="form-control" placeholder="**** **** **** ****"  aria-describedby="addon-wrapping" formControlName="CardNumber">
           </div>
           <div *ngIf="CardForm.get('CardNumber')?.invalid && (CardForm.get('CardNumber')?.dirty || CardForm.get('CardNumber')?.touched)  ">
             <div *ngIf="CardForm.get('CardNumber')?.errors?.required "><span style="font-size: 12px; color: red;">Card Name is required.</span> </div>
@@ -16,21 +20,21 @@
            </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Name on the card:&nbsp;&nbsp;</p>
-            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" formControlName="Name">
+            <input type="text" class="form-control" placeholder=""  aria-describedby="addon-wrapping" formControlName="Name">
           </div>
           <div *ngIf="CardForm.get('Name')?.invalid && (CardForm.get('Name')?.dirty || CardForm.get('Name')?.touched)  ">
             <div *ngIf="CardForm.get('Name')?.errors?.required "><span style="font-size: 12px; color: red;">Name is required.</span> </div>
             </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Valid thru:&nbsp;&nbsp;</p>
-            <input type="text" class="form-control" placeholder="MM/YY" aria-label="Username" aria-describedby="addon-wrapping" formControlName="ValidTill">
+            <input type="date"  (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue" aria-describedby="addon-wrapping" formControlName="ValidTill">
           </div>
           <div *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
             <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid Thru date is required.</span> </div>
             </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">CVV:&nbsp;&nbsp;</p>
-            <input type="text" class="form-control" placeholder="***" aria-label="Username" aria-describedby="addon-wrapping" formControlName="CVV">
+            <input type="text" class="form-control" placeholder="***"  aria-describedby="addon-wrapping" formControlName="CVV">
           </div>
           <div *ngIf="CardForm.get('CVV')?.invalid && (CardForm.get('CVV')?.dirty || CardForm.get('CVV')?.touched)  ">
             <div *ngIf="CardForm.get('CVV')?.errors?.required "><span style="font-size: 12px; color: red;">CVV is required.</span> </div>
@@ -38,9 +42,10 @@
             <div *ngIf="CardForm.get('CVV')?.errors?.pattern"><span style="font-size: 12px; color: red;">CVV should only have numbers</span> </div>
            </div>
           <div>
-            <button class="w3-button w3-block " type="submit" [disabled]="CardForm.invalid"><i class='fas fa-angle-right'></i> Submit</button>
+            <button class="w3-button w3-block " type="submit" [disabled]="CardForm.invalid" ><i class='fas fa-angle-right'></i> Submit</button>
           </div>
         </form>
+      
         </div>
       </div>
   </div>
