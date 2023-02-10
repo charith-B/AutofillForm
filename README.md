@@ -141,7 +141,9 @@ The functionality is mainly for user convinience where the system can automatica
 
 * Forms component: 
 
-			The fields for the form are listed out here with vaidations. A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component. Another button for submitting the form values.
+			The fields for the form are listed out here with vaidations. 
+               A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component.
+               Another button for submitting the form values.
       
 ![Form component](src/assets/img/image-ref/Forms-component.png  )
 
