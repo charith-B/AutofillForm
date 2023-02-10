@@ -64,59 +64,59 @@ The functionality is mainly for user convinience where the system can automatica
 
 * First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
 
--->To verify proper installations Open terminal and type ===> npm -v
+* To verify proper installations Open terminal and type ===> npm -v
 
 ![Check npm version](src/assets/img/image-ref/check-npm-version.png )
 
--->Next Install VSCODE using ==> https://code.visualstudio.com/Download
+* Next Install VSCODE using ==> https://code.visualstudio.com/Download
 
--->Then open VSCODE and  from the VSCODE terminal Install Angular CLI using command "npm install -g @angular/cli"
+* Then open VSCODE and  from the VSCODE terminal Install Angular CLI using command "npm install -g @angular/cli"
 
 ![Angular Install](src/assets/img/image-ref/Angular-installation.png  )
 
 
--->To verify proper installations in the terminal and type ==>ng v
+* To verify proper installations in the terminal and type ==>ng v
 
 ![Angular version check](src/assets/img/image-ref/Angular-version.png  )
 
 
--->Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
+* Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
 ![Git clone](src/assets/img/image-ref/clone-project.png  )
 
 
--->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
+* Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
 ![Npm Install](src/assets/img/image-ref/npm-install.png  )
 
 
--->Then to run the project open new terminal in VScode and type==> "Ng serve"
+* Then to run the project open new terminal in VScode and type==> "Ng serve"
 ![Ng serve](src/assets/img/image-ref/ng-serve.png  )
 
 
--->This will execute the code and run the project hosting it in localhost with URL==> "http://localhost:4200/" using which we can access the project in any browser on the system.
+* This will execute the code and run the project hosting it in localhost with URL==> "http://localhost:4200/" using which we can access the project in any browser on the system.
 ![Hosting  project](src/assets/img/image-ref/host-project.png  )
 
 
 # Project files Descriptions:
 
--->node modules:
+* node modules:
      The node_modules file in an Angular project is a folder that contains all the dependencies and packages needed for the project to run.
      These dependencies are installed via the npm (Node Package Manager) tool, which downloads and installs the packages specified in the project's package.json file.
 
--->src: 
+* src: 
      The src file in an Angular project is a directory that contains all the source code for the project. It is the main source of the Angular application and holds the main code for the components, services, models, directives, and other essential elements of the project.
      The src file is where developers write the main logic of the application, create and modify components, and write code to make the application work as intended. It is crucial to the overall functioning and success of an Angular project.
 
--->angular.json:
+* angular.json:
      The angular.json file is a configuration file that is automatically generated in an Angular project when you use the Angular CLI to create a new project. It is used to store various settings and configuration options for the Angular project.
 
--->package.json:
+* package.json:
      The package.json file in an Angular project is a configuration file that contains information about the project and its dependencies. It is used by npm (Node Package Manager) to manage the project's dependencies and scripts. 
      The file is located at the root of the Angular project and contains information such as the name of the project, version number, author, description, and scripts. 
      The dependencies section of the file lists all the npm packages that the project depends on, including Angular itself and any other libraries or plugins that the project requires. 
      The scripts section contains a list of npm scripts that can be run to perform various tasks, such as building the project, starting the development server, or running tests. 
      The package.json file is an important part of the Angular project and helps to ensure that the project can be easily maintained and developed over time.
 
--->tsconfig.json:
+* tsconfig.json:
      The tsconfig.json file in an Angular project is a configuration file for TypeScript that provides information about how TypeScript should compile your code.
      It specifies the root directory for TypeScript files, the compiler options to use, the target version of JavaScript to generate, and the files and folders to include or exclude from the compilation. 
      This file is important for ensuring that TypeScript is compiling your code correctly and providing you with the desired outputs. It helps ensure consistency in your code by enforcing certain coding standards and practices.
