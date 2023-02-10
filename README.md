@@ -65,7 +65,7 @@ The functionality is mainly for user convinience where the system can automatica
 -->First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
 
 -->To verify proper installations Open terminal and type ===> npm -v
-	![Check npm version](/image-ref/check-npm-version.png )
+	![Check npm version](./image-ref/check-npm-version.png )
 
 -->Next Install VSCODE using ==> https://code.visualstudio.com/Download
 
