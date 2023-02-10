@@ -85,31 +85,38 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 * Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
-![Npm Install](src/assets/img/image-ref/npm-install.png  )
+  
+  ![Npm Install](src/assets/img/image-ref/npm-install.png  )
 
 
 * Then to run the project open new terminal in VScode and type==> "Ng serve"
+
 ![Ng serve](src/assets/img/image-ref/ng-serve.png  )
 
 
 * This will execute the code and run the project hosting it in localhost with URL==> "http://localhost:4200/" using which we can access the project in any browser on the system.
+
 ![Hosting  project](src/assets/img/image-ref/host-project.png  )
 
 
 # Project files Descriptions:
 
 * node modules:
+
      The node_modules file in an Angular project is a folder that contains all the dependencies and packages needed for the project to run.
      These dependencies are installed via the npm (Node Package Manager) tool, which downloads and installs the packages specified in the project's package.json file.
 
 * src: 
+
      The src file in an Angular project is a directory that contains all the source code for the project. It is the main source of the Angular application and holds the main code for the components, services, models, directives, and other essential elements of the project.
      The src file is where developers write the main logic of the application, create and modify components, and write code to make the application work as intended. It is crucial to the overall functioning and success of an Angular project.
 
 * angular.json:
+
      The angular.json file is a configuration file that is automatically generated in an Angular project when you use the Angular CLI to create a new project. It is used to store various settings and configuration options for the Angular project.
 
 * package.json:
+
      The package.json file in an Angular project is a configuration file that contains information about the project and its dependencies. It is used by npm (Node Package Manager) to manage the project's dependencies and scripts. 
      The file is located at the root of the Angular project and contains information such as the name of the project, version number, author, description, and scripts. 
      The dependencies section of the file lists all the npm packages that the project depends on, including Angular itself and any other libraries or plugins that the project requires. 
@@ -117,6 +124,7 @@ The functionality is mainly for user convinience where the system can automatica
      The package.json file is an important part of the Angular project and helps to ensure that the project can be easily maintained and developed over time.
 
 * tsconfig.json:
+
      The tsconfig.json file in an Angular project is a configuration file for TypeScript that provides information about how TypeScript should compile your code.
      It specifies the root directory for TypeScript files, the compiler options to use, the target version of JavaScript to generate, and the files and folders to include or exclude from the compilation. 
      This file is important for ensuring that TypeScript is compiling your code correctly and providing you with the desired outputs. It helps ensure consistency in your code by enforcing certain coding standards and practices.
@@ -124,23 +132,31 @@ The functionality is mainly for user convinience where the system can automatica
 
 # Structure
 
-Home component :
+* Home component :
+
 			Initial page that is loaded when the project is hosted. Only has a continue button to redirect to the forms page
+      
 ![Home component](src/assets/img/image-ref/home-component.png  )
 
 
-Forms component: 
+* Forms component: 
+
 			The fields for the form are listed out here with vaidations. A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component. Another button for submitting the form values.
+      
 ![Form component](src/assets/img/image-ref/Forms-component.png  )
 
                      
-Camera component: 
+* Camera component: 
+
 			This will redirect to a new window where the user can take a picture of the document to auto-fill the form. 
+      
 ![Camera component](src/assets/img/image-ref/camera-component.png  )
 
 
-Review component: 
+* Review component: 
+
 			In this page the user can review the form details for the last time before submitting the details.
+      
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
 
