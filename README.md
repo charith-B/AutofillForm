@@ -1,4 +1,4 @@
-# README.md Template
+# README.md 
 
 # CPS 595 - P1
 
