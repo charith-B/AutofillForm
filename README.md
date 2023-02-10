@@ -81,7 +81,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 -->Now Clone the project from the git repository from the link mentioned above or by typing ==> "git clone https://github.com/charith-B/AutofillForm.git" in the VSCODE terminal
-![Check npm version](src/assets/img/image-ref/clone-project .png  )
+![Check npm version](src/assets/img/image-ref/clone-project.png  )
 
 
 -->Once cloned open the project folder and Install Node-modules using "npm install" in the VScode terminal.
