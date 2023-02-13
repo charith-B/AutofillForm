@@ -1,4 +1,4 @@
-# README.md Template
+# README.md 
 
 # CPS 595 - P1
 
@@ -62,7 +62,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 # Environment Setup
 
-* First step is to Install  Node.js  from the link...........===>   https://nodejs.org/en/download/
+* First step is to Install  Node.js  from the link  ===>   https://nodejs.org/en/download/
 
 * To verify proper installations Open terminal and type ===> npm -v
 
@@ -164,9 +164,26 @@ The functionality is mainly for user convinience where the system can automatica
 
 #System Design
 
-Project UML diagram
+* Project UML diagram
 
 
 ![UML Diagram](src/assets/img/UML-diagram.png  )
+
+* Sequence diagram
+
+
+![Sequence Diagram](src/assets/img/Sequence-Diagram.png  )
+
+
+  * Description:
+  
+  * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
+    to proceed forward.
+    
+  * Then that leads us to the Forms component where the user can either manually enter the form data or can choose to click on the "Camera" button to use the auto-fill        feature.
+ 
+  * If the User selects to manually enter the date then he/she can fill the form and press submit or else he can press the camera button to access the camera plug-in       which opens a pop-up from which we can access the camera to take picture from which the picture is scanned and the text is extracted and filtered and will be auto     filled into the form fields.
+ 
+  * Once the form is filled the user can press "Submit" button and that will redirect us to the review page where the user can verify the data that is displayed in a       table format one last time before submitting the data.
 
 
