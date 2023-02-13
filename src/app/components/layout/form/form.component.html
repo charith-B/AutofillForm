@@ -27,7 +27,7 @@
             </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Valid thru:&nbsp;&nbsp;</p>
-            <input type="date"  (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue" aria-describedby="addon-wrapping" formControlName="ValidTill">
+            <input type="date" (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue"  aria-describedby="addon-wrapping" formControlName="ValidTill">
           </div>
           <div *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
             <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid Thru date is required.</span> </div>
