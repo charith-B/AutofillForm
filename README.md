@@ -162,7 +162,7 @@ The functionality is mainly for user convinience where the system can automatica
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
 
-#System Design
+# System Design
 
 * Project UML diagram
 
@@ -175,7 +175,7 @@ The functionality is mainly for user convinience where the system can automatica
 ![Sequence Diagram](src/assets/img/Sequence-Diagram.png  )
 
 
-  * Description:
+  # Description:
   
   * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
     to proceed forward.
