@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { WebcamImage } from 'ngx-webcam';
+
 
 @Component({
   selector: 'app-form',
@@ -17,10 +20,14 @@ export class FormComponent implements OnInit {
   mindate!: Date;
   today!: Date;
   environment:any;
+  public modalRef!: BsModalRef;
+  public modalConfig: any = { class: 'modal-lg', ignoreBackdropClick: true, backdrop: 'static' };
+  webcamImage:WebcamImage | undefined;
+
   
 
 
-  constructor(private formBuilder: FormBuilder,private router: Router,private camera: Camera) { }
+  constructor(private formBuilder: FormBuilder,private router: Router,private camera: Camera,private modalService: BsModalService) { }
 
   ngOnInit(): void {
     this.environment="http://localhost:4200";
@@ -41,6 +48,14 @@ export class FormComponent implements OnInit {
       CVV: ['', [Validators.required,Validators.maxLength(4),Validators.pattern(/^\d+$/)]]
     });
   }
+
+  handlepicture(webcamImage:WebcamImage){
+this.webcamImage=webcamImage;
+  }
+
+  upload(){
+    
+  }
   onSubmit(value:any[]){
     console.log(value);
     this.formvalue.push(value);
@@ -50,8 +65,13 @@ this.router.navigate(['/Verify-Details']);
 
 
   }
-  takePicture() {
-    window.open(this.environment+'/camera');
+  takePicture(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, Object.assign({}, this.modalConfig));
+
+
+    // window.open(this.environment+'/camera');
+
+
   // const options: CameraOptions = {
   //   quality: 100,
   //   destinationType: this.camera.DestinationType.DATA_URL,
@@ -64,6 +84,9 @@ this.router.navigate(['/Verify-Details']);
   // }, (err) => {
   //   console.log(err);
   // });
+}
+CloseModal() {
+  this.modalRef.hide();
 }
   selecteddate(value:string){
     // var splitted = value.slice(0, 7);

@@ -5,7 +5,9 @@
         </div>
         <div class="card-body position-relative" >
             <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;"> 
-              <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture()"><i class="fa fa-camera" aria-hidden="true"></i><br>Camera</button>
+     
+              <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture(CameraModal)"><i class="fa fa-camera" aria-hidden="true"></i><br>Camera</button><br>
+              <input type="file" accept=".jpg,.png" class="button" (change)="upload()" style="padding-left: 225px;" />
             </div>
          
           <form [formGroup]="CardForm" (ngSubmit)="onSubmit(CardForm.value)" novalidate="novalidate">
@@ -49,3 +51,22 @@
         </div>
       </div>
   </div>
+  <ng-template #CameraModal>
+    <div class="modal-content" role="dialog" aria-labelledby="modal_heading" aria-describedby="modal_heading">
+        <div class="modal-header">
+            <h5 class="modal-title pull-left" id="modal_heading">Camera</h5>
+            <button type="button" class="close pull-right" aria-label="Close"  (click)="CloseModal()">
+                <i class="fa fa-times" aria-hidden="true" title="Close"></i>
+            </button>
+        </div>
+        <ng-container>
+          <app-camera></app-camera>
+          <br>
+          <button class="w3-button w3-block "  type="button"  (click)="CloseModal()"><i class='fas fa-angle-right'></i> Close</button>
+          <button class="w3-button w3-block "  type="button"  (click)="CloseModal()"><i class='fas fa-angle-right'></i> Submit</button>
+
+
+
+          </ng-container>
+  </div>
+</ng-template>

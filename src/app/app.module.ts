@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Camera } from '@ionic-native/camera/ngx';
 import { WebcamModule } from 'ngx-webcam';
+import {ModalModule} from 'ngx-bootstrap/modal';
+
 
 
 
@@ -33,6 +35,8 @@ import { CameraComponent } from './components/layout/camera/camera.component';
     FormsModule,
     ReactiveFormsModule,
     WebcamModule,
+    ModalModule.forRoot(),
+    
   ],
   providers: [Camera],
   bootstrap: [AppComponent]
