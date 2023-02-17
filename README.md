@@ -164,7 +164,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 # System Design
 
-* Project UML diagram
+* Project Flow diagram
 
 
 ![UML Diagram](src/assets/img/UML-diagram.png  )
@@ -173,6 +173,11 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 ![Sequence Diagram](src/assets/img/Sequence-Diagram.png  )
+
+* Use-case Diagram
+
+![Use-case Diagram](src/assets/img/usecase.png  )
+
 
 
   # Description:
