@@ -129,6 +129,37 @@ The functionality is mainly for user convinience where the system can automatica
      It specifies the root directory for TypeScript files, the compiler options to use, the target version of JavaScript to generate, and the files and folders to include or exclude from the compilation. 
      This file is important for ensuring that TypeScript is compiling your code correctly and providing you with the desired outputs. It helps ensure consistency in your code by enforcing certain coding standards and practices.
      It also helps with debugging, as errors will be caught at compile-time rather than at runtime. Overall, the tsconfig.json file plays a crucial role in helping Angular projects maintain quality and maintainable code.
+     
+# System Design
+
+* Project Flow diagram
+
+
+![UML Diagram](src/assets/img/UML-diagram.png  )
+
+* Sequence diagram
+
+
+![Sequence Diagram](src/assets/img/Sequence-Diagram.png  )
+
+* Use-case Diagram
+
+![Use-case Diagram](src/assets/img/usecase.png  )
+
+
+
+  # Description:
+  
+  * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
+    to proceed forward.
+    
+  * Then that leads us to the Forms component where the user can either manually enter the form data or can choose to click on the "Camera" button to use the auto-fill        feature.
+ 
+  * If the User selects to manually enter the date then he/she can fill the form and press submit or else he can press the camera button to access the camera plug-in       which opens a pop-up from which we can access the camera to take picture from which the picture is scanned and the text is extracted and filtered and will be auto     filled into the form fields.
+ 
+  * Once the form is filled the user can press "Submit" button and that will redirect us to the review page where the user can verify the data that is displayed in a       table format one last time before submitting the data.
+
+
 
 # Structure
 
@@ -161,34 +192,5 @@ The functionality is mainly for user convinience where the system can automatica
       
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
-
-# System Design
-
-* Project Flow diagram
-
-
-![UML Diagram](src/assets/img/UML-diagram.png  )
-
-* Sequence diagram
-
-
-![Sequence Diagram](src/assets/img/Sequence-Diagram.png  )
-
-* Use-case Diagram
-
-![Use-case Diagram](src/assets/img/usecase.png  )
-
-
-
-  # Description:
-  
-  * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
-    to proceed forward.
-    
-  * Then that leads us to the Forms component where the user can either manually enter the form data or can choose to click on the "Camera" button to use the auto-fill        feature.
- 
-  * If the User selects to manually enter the date then he/she can fill the form and press submit or else he can press the camera button to access the camera plug-in       which opens a pop-up from which we can access the camera to take picture from which the picture is scanned and the text is extracted and filtered and will be auto     filled into the form fields.
- 
-  * Once the form is filled the user can press "Submit" button and that will redirect us to the review page where the user can verify the data that is displayed in a       table format one last time before submitting the data.
 
 
