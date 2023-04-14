@@ -16,7 +16,6 @@ import { HomeComponent } from './components/layout/home/home.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FormComponent } from './components/layout/form/form.component';
 import { VerifydetailsComponent } from './components/layout/verifydetails/verifydetails.component';
-import { CameraComponent } from './components/layout/camera/camera.component';
  
 
 @NgModule({
@@ -26,7 +25,6 @@ import { CameraComponent } from './components/layout/camera/camera.component';
     HeaderComponent,
     FormComponent,
     VerifydetailsComponent,
-    CameraComponent,
    
   ],
   imports: [

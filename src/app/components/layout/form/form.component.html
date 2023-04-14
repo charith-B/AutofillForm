@@ -7,7 +7,7 @@
             <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;"> 
      
               <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture(CameraModal)"><i class="fa fa-camera" aria-hidden="true"></i><br>Camera</button><br>
-              <input type="file" accept=".jpg,.png" class="button" (change)="upload()" style="padding-left: 225px;" />
+              <input type="file" accept=".jpg,.png" class="button" (change)="onFileSelected($event)" style="padding-left: 225px;" />
             </div>
          
           <form [formGroup]="CardForm" (ngSubmit)="onSubmit(CardForm.value)" novalidate="novalidate">
@@ -29,7 +29,55 @@
             </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Valid thru:&nbsp;&nbsp;</p>
-            <input type="date" (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue"  aria-describedby="addon-wrapping" formControlName="ValidTill">
+            <!-- <label for="month" style="text-decoration: underline;    font-weight: bold;">Month: </label> -->
+<select id="month" name="month" style="margin-left: 10px;" formControlName="selectedMonth" >
+  <option value="00" disabled selected>Month</option>
+  <option value="1">January</option>
+  <option value="2">February</option>
+  <option value="3">March</option>
+  <option value="4">April</option>
+  <option value="5">May</option>
+  <option value="6">June</option>
+  <option value="7">July</option>
+  <option value="8">August</option>
+  <option value="9">September</option>
+  <option value="10">October</option>
+  <option value="11">November</option>
+  <option value="12">December</option>
+</select>
+
+<!-- <label for="day" style="text-decoration: underline;    font-weight: bold; margin-left: 10px;">  Day: </label> -->
+<select id="day" name="day" style="margin-left: 10px;" formControlName="selectedDay">
+  <option value="00" disabled selected>year</option>
+  <option value="23">2023</option>
+  <option value="24">2024</option>
+  <option value="25">2025</option>
+  <option value="26">2026</option>
+  <option value="27">2027</option>
+  <option value="28">2028</option>
+  <option value="29">2029</option>
+  <option value="30">2030</option>
+  <option value="31">2031</option>
+  <option value="32">2032</option>
+  <option value="33">2033</option>
+  <option value="34">2034</option>
+  <option value="35">2035</option>
+  <option value="36">2036</option>
+  <option value="37">2037</option>
+  <option value="38">2038</option>
+  <option value="39">2029</option>
+  <option value="40">2040</option>
+  <option value="41">2041</option>
+  <option value="42">2042</option>
+  <option value="43">2043</option>
+  <option value="44">2044</option>
+  <option value="45">2045</option>
+  <option value="46">2046</option>
+  <option value="47">2047</option>
+  <option value="48">2048</option>
+  <option value="49">2049</option>
+</select>
+            <!-- <input type="date" (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue"  aria-describedby="addon-wrapping" formControlName="ValidTill"> -->
           </div>
           <div *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
             <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid Thru date is required.</span> </div>
@@ -60,13 +108,29 @@
             </button>
         </div>
         <ng-container>
-          <app-camera></app-camera>
+          <div>
+            <div class="col-md-12">
+            <webcam [trigger]="invokeObservable" (imageCapture)="captureImg($event)" ></webcam>
+            </div>
+            <div class="col-md-12">
+            <button class="w3-button w3-block "  type="button"  (click)="getSnapshot()"><i class='fas fa-angle-right'></i> Take picture</button>
+            <button class="w3-button w3-block "  type="button"  *ngIf="EnablePreview" (click)="diaplaypreview()"><i class='fas fa-angle-right'></i> Preview</button>
+            </div>
+            <div class="col-12">
+            <div *ngIf="showPreview" id="results"><h4>Here is a preview of the image captured.</h4>
+                <br><p style="font-style: italic;">note: The image shown may be displayed as mirrored</p>
+            <img [src]="webcamImage?.imageAsDataUrl" height="400px" /></div>
+            </div>
+            </div>
           <br>
           <button class="w3-button w3-block "  type="button"  (click)="CloseModal()"><i class='fas fa-angle-right'></i> Close</button>
-          <button class="w3-button w3-block "  type="button"  (click)="CloseModal()"><i class='fas fa-angle-right'></i> Submit</button>
+          <button class="w3-button w3-block "  type="button"  (click)="recognizeText(webcamImage.imageAsDataUrl)"><i class='fas fa-angle-right'></i> Submit</button>
 
 
 
           </ng-container>
   </div>
 </ng-template>
+
+
+

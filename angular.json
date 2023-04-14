@@ -24,7 +24,22 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/tesseract.js-core",
+                "output": "./assets/tesseract/core"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/tesseract.js-core/eng.traineddata.gz",
+                "output": "./assets/tesseract/core/eng.traineddata.gz"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/tesseract.js-lang-data",
+                "output": "./assets/tesseract/langs"
+              }
             ],
             "styles": [
               "src/styles.css"
