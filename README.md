@@ -13,7 +13,7 @@ CPS 595 - P1, Spring 2023
 
 Instructor(s):
 
-- Ahmed El Ouadrhiri
+- Dr. Ahmed El Ouadrhiri
 - Dr. Phu Phung 
 
 
