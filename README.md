@@ -1,4 +1,4 @@
-# README.md 
+# PROJECT REPORT
 
 # CPS 595 - P1
 
@@ -38,8 +38,6 @@ Synchrony
 
 
 # Project Management Information
-
-Management board (private access): https://trello.com/invite/b/xcmJlyKv/ATTIe130d895e86fa8207878de1f9ffdccb1E36CE1BC/project-autofill-forms
 
 Source code repository (private access): https://github.com/charith-B/AutofillForm.git
 
