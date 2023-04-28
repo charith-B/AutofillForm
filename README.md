@@ -41,7 +41,7 @@ Synchrony
 
 Source code repository (private access): https://github.com/charith-B/AutofillForm.git
 
-
+Power-point presentation: https://www.canva.com/design/DAFc0O8X960/TJGVTa15g3iiFY5Y52OHYw/edit?utm_content=DAFc0O8X960&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 # Overview
 
@@ -191,7 +191,13 @@ The functionality is mainly for user convinience where the system can automatica
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
 * Short Demo:
+
+    Click on the Image to Redirect to the youtube video
+    
 [![ Youtube Demo Video](src/assets/img/image-ref/youtube_video_thumbnail.png  ) ](https://youtu.be/y2JQiFeS2_g) 
+
+
+
 
 
 
