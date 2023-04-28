@@ -191,7 +191,7 @@ The functionality is mainly for user convinience where the system can automatica
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
 * Short Demo:
-![ Youtube Demo Video ](https://youtu.be/y2JQiFeS2_g) 
+[![ Youtube Demo Video](src/assets/img/image-ref/youtube video thumbnail.png  ) ](https://youtu.be/y2JQiFeS2_g) 
 
 
 
