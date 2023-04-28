@@ -186,6 +186,7 @@ this.CardForm = this.formBuilder.group({
 
 
       });
+      this.CloseModal();
   }
 
 }
