@@ -48,10 +48,12 @@ Source code repository (private access): https://github.com/charith-B/AutofillFo
 
 Power-point presentation: https://www.canva.com/design/DAFc0O8X960/TJGVTa15g3iiFY5Y52OHYw/edit?utm_content=DAFc0O8X960&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
+Project TimeSheet: https://1drv.ms/x/s!Aln4QU2sXfSYgvgnYMEqwJZjizvb_A?e=aKfe3K
+
 #  Overview
 
 AutoFill Forms
-Project Requirement: Develop an autofill capability for a web page based on a scanned document. 
+Project Requirement: Develop an autofill capability for a web page based on a scanned Image. 
 
 Functionalities:
 The application should be allowed to access the camera to capture or extract key information from an uploaded document (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
