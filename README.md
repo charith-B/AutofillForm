@@ -56,7 +56,8 @@ AutoFill Forms
 Project Requirement: Develop an autofill capability for a web page based on a scanned Image. 
 
 Functionalities:
-The application should be allowed to access the camera to capture or extract key information from an uploaded document (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
+The application should be allowed to access the camera to capture or extract key information from an uploaded Image (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
+
 Any additional or unmapped fields should be made available for the user to manually enter.
 
 
