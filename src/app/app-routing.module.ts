@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { FormComponent } from './components/layout/form/form.component';
-import { HomeComponent } from './components/layout/home/home.component';
-import { VerifydetailsComponent } from './components/layout/verifydetails/verifydetails.component';
+  import { NgModule } from '@angular/core';
+  import { RouterModule, Routes } from '@angular/router';
+  import { FormComponent } from './components/layout/form/form.component';
+  import { HomeComponent } from './components/layout/home/home.component';
+  import { VerifydetailsComponent } from './components/layout/verifydetails/verifydetails.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },

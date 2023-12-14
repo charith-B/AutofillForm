@@ -1,136 +1,213 @@
 <div class="container" style="align-items: center;">
-    <div class="card text-center" >
-        <div class="card-header">
-            <h3>AUTO-FILL FORMS</h3>
-        </div>
-        <div class="card-body position-relative" >
-            <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;"> 
-     
-              <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture(CameraModal)"><i class="fa fa-camera" aria-hidden="true"></i><br>Camera</button><br>
-              <input type="file" accept=".jpg,.png" class="button" (change)="onFileSelected($event)" style="padding-left: 225px;" />
-            </div>
-         
-          <form [formGroup]="CardForm" (ngSubmit)="onSubmit(CardForm.value)" novalidate="novalidate">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>AUTO-FILL FORMS</h3>
+    </div>
+    <div class="card-body position-relative">
+
+      <div *ngIf="formchoice" style="margin-top: 100px; margin-bottom: 100px;">
+          <button type="button" class="btn btn-success" (click)="chooseForm('CC')">Credit Card </button>
+          <!-- <button type="button" class="btn btn-success" (click)="chooseForm('DL')">Driver licence</button> -->
+          <button type="button" class="btn btn-success" (click)="chooseForm('PP')">Passport</button>
+      </div>
+
+
+      <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;">
+        <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture(CameraModal)"><i
+            class="fa fa-camera" aria-hidden="true"></i><br>Camera</button><br>
+        <input type="file" accept=".jpg,.png" class="button" (change)="onFileSelected($event)"
+          style="padding-left: 225px;" />
+      </div>
+      <!-- card form -->
+      <div *ngIf="creditCard">
+        <form [formGroup]="CardForm" (ngSubmit)="onSubmit(CardForm.value,'credit')" novalidate="novalidate">
           <div class="input-group flex-nowrap">
-            <p style="font-weight: bold; ">Card number:&nbsp;&nbsp;</p> 
-            <input type="text" class="form-control" placeholder="**** **** **** ****"  aria-describedby="addon-wrapping" formControlName="CardNumber">
+            <p style="font-weight: bold; ">Card number:&nbsp;&nbsp;</p>
+            <input type="text" class="form-control" placeholder="**** **** **** ****" aria-describedby="addon-wrapping"
+              formControlName="CardNumber">
           </div>
-          <div *ngIf="CardForm.get('CardNumber')?.invalid && (CardForm.get('CardNumber')?.dirty || CardForm.get('CardNumber')?.touched)  ">
-            <div *ngIf="CardForm.get('CardNumber')?.errors?.required "><span style="font-size: 12px; color: red;">Card Name is required.</span> </div>
-            <div *ngIf="CardForm.get('CardNumber')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max Length for Card number is 16 digits</span> </div>
-            <div *ngIf="CardForm.get('CardNumber')?.errors?.pattern"><span style="font-size: 12px; color: red;">Card number should only have numbers</span> </div>
-           </div>
+          <div
+            *ngIf="CardForm.get('CardNumber')?.invalid && (CardForm.get('CardNumber')?.dirty || CardForm.get('CardNumber')?.touched)  ">
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.required "><span style="font-size: 12px; color: red;">Card
+                Name is required.</span> </div>
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max
+                Length for Card number is 16 digits</span> </div>
+            <div *ngIf="CardForm.get('CardNumber')?.errors?.pattern"><span style="font-size: 12px; color: red;">Card
+                number should only have numbers</span> </div>
+          </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Name on the card:&nbsp;&nbsp;</p>
-            <input type="text" class="form-control" placeholder=""  aria-describedby="addon-wrapping" formControlName="Name">
+            <input type="text" class="form-control" placeholder="" aria-describedby="addon-wrapping"
+              formControlName="Name">
           </div>
-          <div *ngIf="CardForm.get('Name')?.invalid && (CardForm.get('Name')?.dirty || CardForm.get('Name')?.touched)  ">
-            <div *ngIf="CardForm.get('Name')?.errors?.required "><span style="font-size: 12px; color: red;">Name is required.</span> </div>
-            </div>
+          <div
+            *ngIf="CardForm.get('Name')?.invalid && (CardForm.get('Name')?.dirty || CardForm.get('Name')?.touched)  ">
+            <div *ngIf="CardForm.get('Name')?.errors?.required "><span style="font-size: 12px; color: red;">Name is
+                required.</span> </div>
+          </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">Valid thru:&nbsp;&nbsp;</p>
             <!-- <label for="month" style="text-decoration: underline;    font-weight: bold;">Month: </label> -->
-<select id="month" name="month" style="margin-left: 10px;" formControlName="selectedMonth" >
-  <option value="00" disabled selected>Month</option>
-  <option value="1">January</option>
-  <option value="2">February</option>
-  <option value="3">March</option>
-  <option value="4">April</option>
-  <option value="5">May</option>
-  <option value="6">June</option>
-  <option value="7">July</option>
-  <option value="8">August</option>
-  <option value="9">September</option>
-  <option value="10">October</option>
-  <option value="11">November</option>
-  <option value="12">December</option>
-</select>
+            <select id="month" name="month" style="margin-left: 10px;" formControlName="selectedMonth">
+              <option value="00" disabled selected>Month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
 
-<!-- <label for="day" style="text-decoration: underline;    font-weight: bold; margin-left: 10px;">  Day: </label> -->
-<select id="day" name="day" style="margin-left: 10px;" formControlName="selectedDay">
-  <option value="00" disabled selected>year</option>
-  <option value="23">2023</option>
-  <option value="24">2024</option>
-  <option value="25">2025</option>
-  <option value="26">2026</option>
-  <option value="27">2027</option>
-  <option value="28">2028</option>
-  <option value="29">2029</option>
-  <option value="30">2030</option>
-  <option value="31">2031</option>
-  <option value="32">2032</option>
-  <option value="33">2033</option>
-  <option value="34">2034</option>
-  <option value="35">2035</option>
-  <option value="36">2036</option>
-  <option value="37">2037</option>
-  <option value="38">2038</option>
-  <option value="39">2029</option>
-  <option value="40">2040</option>
-  <option value="41">2041</option>
-  <option value="42">2042</option>
-  <option value="43">2043</option>
-  <option value="44">2044</option>
-  <option value="45">2045</option>
-  <option value="46">2046</option>
-  <option value="47">2047</option>
-  <option value="48">2048</option>
-  <option value="49">2049</option>
-</select>
+            <!-- <label for="day" style="text-decoration: underline;    font-weight: bold; margin-left: 10px;">  Day: </label> -->
+            <select id="day" name="day" style="margin-left: 10px;" formControlName="selectedDay">
+              <option value="00" disabled selected>year</option>
+              <option value="23">2023</option>
+              <option value="24">2024</option>
+              <option value="25">2025</option>
+              <option value="26">2026</option>
+              <option value="27">2027</option>
+              <option value="28">2028</option>
+              <option value="29">2029</option>
+              <option value="30">2030</option>
+              <option value="31">2031</option>
+              <option value="32">2032</option>
+              <option value="33">2033</option>
+              <option value="34">2034</option>
+              <option value="35">2035</option>
+              <option value="36">2036</option>
+              <option value="37">2037</option>
+              <option value="38">2038</option>
+              <option value="39">2029</option>
+              <option value="40">2040</option>
+              <option value="41">2041</option>
+              <option value="42">2042</option>
+              <option value="43">2043</option>
+              <option value="44">2044</option>
+              <option value="45">2045</option>
+              <option value="46">2046</option>
+              <option value="47">2047</option>
+              <option value="48">2048</option>
+              <option value="49">2049</option>
+            </select>
             <!-- <input type="date" (change)="selecteddate(CardForm.value.ValidTill)" class="form-control" placeholder="MM/YYYY" [value]="datevalue"  aria-describedby="addon-wrapping" formControlName="ValidTill"> -->
           </div>
-          <div *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
-            <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid Thru date is required.</span> </div>
-            </div>
+          <div
+            *ngIf="CardForm.get('ValidTill')?.invalid && (CardForm.get('ValidTill')?.dirty || CardForm.get('ValidTill')?.touched)  ">
+            <div *ngIf="CardForm.get('ValidTill')?.errors?.required "><span style="font-size: 12px; color: red;">Valid
+                Thru date is required.</span> </div>
+          </div>
           <div class="input-group flex-nowrap">
             <p style="font-weight: bold;">CVV:&nbsp;&nbsp;</p>
-            <input type="text" class="form-control" placeholder="***"  aria-describedby="addon-wrapping" formControlName="CVV">
+            <input type="text" class="form-control" placeholder="***" aria-describedby="addon-wrapping"
+              formControlName="CVV">
           </div>
           <div *ngIf="CardForm.get('CVV')?.invalid && (CardForm.get('CVV')?.dirty || CardForm.get('CVV')?.touched)  ">
-            <div *ngIf="CardForm.get('CVV')?.errors?.required "><span style="font-size: 12px; color: red;">CVV is required.</span> </div>
-            <div *ngIf="CardForm.get('CVV')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max Length for CVV is 4 digits</span> </div>
-            <div *ngIf="CardForm.get('CVV')?.errors?.pattern"><span style="font-size: 12px; color: red;">CVV should only have numbers</span> </div>
-           </div>
+            <div *ngIf="CardForm.get('CVV')?.errors?.required "><span style="font-size: 12px; color: red;">CVV is
+                required.</span> </div>
+            <div *ngIf="CardForm.get('CVV')?.errors?.maxlength"><span style="font-size: 12px; color: red;">Max Length
+                for CVV is 4 digits</span> </div>
+            <div *ngIf="CardForm.get('CVV')?.errors?.pattern"><span style="font-size: 12px; color: red;">CVV should only
+                have numbers</span> </div>
+          </div>
           <div>
-            <button class="w3-button w3-block " type="submit" [disabled]="CardForm.invalid" ><i class='fas fa-angle-right'></i> Proceed</button>
+            <button class="w3-button w3-block " type="submit" [disabled]="CardForm.invalid"><i
+                class='fas fa-angle-right'></i> Proceed</button>
           </div>
         </form>
-      
+      </div>
+      <!-- passport form -->
+<div *ngIf="passport">
+  <form [formGroup]="passportForm" (ngSubmit)="onSubmit(passportForm.value,'passport')" novalidate="novalidate">
+    <div class="input-group flex-nowrap">
+      <p style="font-weight: bold; ">Full Name :&nbsp;&nbsp;</p>
+      <input type="text" class="form-control" placeholder="" aria-describedby="addon-wrapping" [(ngModel)]="fn"
+        formControlName="fullName">
+    </div>
+    <div
+      *ngIf="CardForm.get('fullName')?.invalid && (CardForm.get('fullName')?.dirty || CardForm.get('fullName')?.touched)  ">
+      <div *ngIf="CardForm.get('fullName')?.errors?.required "><span style="font-size: 12px; color: red;">Card
+          fullName is required.</span> </div>
+    </div>
+    <div class="input-group flex-nowrap">
+      <p style="font-weight: bold;">Passport Number :&nbsp;&nbsp;</p>
+      <input type="text" class="form-control" placeholder="" aria-describedby="addon-wrapping" [(ngModel)]="pn"
+        formControlName="passportNo">
+    </div>
+    <div
+      *ngIf="CardForm.get('passportNo')?.invalid && (CardForm.get('passportNo')?.dirty || CardForm.get('passportNo')?.touched)  ">
+      <div *ngIf="CardForm.get('passportNo')?.errors?.required "><span style="font-size: 12px; color: red;">passportNo is
+          required.</span> </div>
+    </div>
+    <div class="input-group flex-nowrap">
+      <p style="font-weight: bold;">Date of birth :&nbsp;&nbsp;</p>
+      <input type="text"  class="form-control" placeholder="" [value]="datevalue"  aria-describedby="addon-wrapping" [(ngModel)]="db" formControlName="DOB">
+    </div>
+    <div
+      *ngIf="CardForm.get('DOB')?.invalid && (CardForm.get('DOB')?.dirty || CardForm.get('DOB')?.touched)  ">
+      <div *ngIf="CardForm.get('DOB')?.errors?.required "><span style="font-size: 12px; color: red;">Date of birth is required.</span> </div>
+    </div>
+    <div class="input-group flex-nowrap">
+      <p style="font-weight: bold;">Date Of Issue:&nbsp;&nbsp;</p>
+      <input type="text" class="form-control" placeholder="***" aria-describedby="addon-wrapping" [(ngModel)]="di"
+        formControlName="dateOfIssue">
+    </div>
+    <div *ngIf="CardForm.get('dateOfIssue')?.invalid && (CardForm.get('dateOfIssue')?.dirty || CardForm.get('dateOfIssue')?.touched)  ">
+      <div *ngIf="CardForm.get('dateOfIssue')?.errors?.required "><span style="font-size: 12px; color: red;">dateOfIssue is
+          required.</span> </div>
+    </div>
+    <div>
+      <button class="w3-button w3-block " type="submit" ><i
+          class='fas fa-angle-right'></i> Proceed</button>
+    </div>
+  </form>
+</div>
+      <!-- licence form -->
+
+    </div>
+  </div>
+</div>
+<ng-template #CameraModal >
+  <div class="modal-content" role="dialog" aria-labelledby="modal_heading" aria-describedby="modal_heading">
+    <div class="modal-header">
+      <h5 class="modal-title pull-left" id="modal_heading">Camera</h5>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="CloseModal()">
+        <i class="fa fa-times" aria-hidden="true" title="Close"></i>
+      </button>
+    </div>
+    <ng-container>
+      <div>
+        <div class="col-md-12">
+          <webcam [trigger]="invokeObservable" (imageCapture)="captureImg($event)"></webcam>
+        </div>
+        <div class="col-md-12">
+          <button class="w3-button w3-block " type="button" (click)="getSnapshot()"><i class='fas fa-angle-right'></i>
+            Take picture</button>
+          <button class="w3-button w3-block " type="button" *ngIf="EnablePreview" (click)="diaplaypreview()"><i
+              class='fas fa-angle-right'></i> Preview</button>
+        </div>
+        <div class="col-12">
+          <div *ngIf="showPreview" id="results">
+            <h4>Here is a preview of the image captured.</h4>
+            <br>
+            <p style="font-style: italic;">note: The image shown may be displayed as mirrored</p>
+            <img [src]="webcamImage.imageAsDataUrl" height="400px" />
+          </div>
         </div>
       </div>
-  </div>
-  <ng-template #CameraModal>
-    <div class="modal-content" role="dialog" aria-labelledby="modal_heading" aria-describedby="modal_heading">
-        <div class="modal-header">
-            <h5 class="modal-title pull-left" id="modal_heading">Camera</h5>
-            <button type="button" class="close pull-right" aria-label="Close"  (click)="CloseModal()">
-                <i class="fa fa-times" aria-hidden="true" title="Close"></i>
-            </button>
-        </div>
-        <ng-container>
-          <div>
-            <div class="col-md-12">
-            <webcam [trigger]="invokeObservable" (imageCapture)="captureImg($event)" ></webcam>
-            </div>
-            <div class="col-md-12">
-            <button class="w3-button w3-block "  type="button"  (click)="getSnapshot()"><i class='fas fa-angle-right'></i> Take picture</button>
-            <button class="w3-button w3-block "  type="button"  *ngIf="EnablePreview" (click)="diaplaypreview()"><i class='fas fa-angle-right'></i> Preview</button>
-            </div>
-            <div class="col-12">
-            <div *ngIf="showPreview" id="results"><h4>Here is a preview of the image captured.</h4>
-                <br><p style="font-style: italic;">note: The image shown may be displayed as mirrored</p>
-            <img [src]="webcamImage?.imageAsDataUrl" height="400px" /></div>
-            </div>
-            </div>
-          <br>
-          <button class="w3-button w3-block "  type="button"  (click)="CloseModal()"><i class='fas fa-angle-right'></i> Close</button>
-          <button class="w3-button w3-block "  type="button"  (click)="recognizeText(webcamImage.imageAsDataUrl)"><i class='fas fa-angle-right'></i> Submit</button>
+      <br>
+      <button class="w3-button w3-block " type="button" (click)="CloseModal()"><i class='fas fa-angle-right'></i>
+        Close</button>
+      <button class="w3-button w3-block " type="button" (click)="recognizeText(webcamImage.imageAsDataUrl)"><i
+          class='fas fa-angle-right'></i> Submit</button>
 
 
 
-          </ng-container>
+    </ng-container>
   </div>
 </ng-template>
-
-
-

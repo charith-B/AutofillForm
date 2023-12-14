@@ -4,14 +4,17 @@
             <h3>AUTO-FILL FORMS</h3>
         </div>
         <div class="card-body" >
-            <table class="table">
+            <table class="table" style="display: flex; flex-wrap: wrap;">
+              <div style="padding: 5px;" *ngFor = "let details of data">
                 <thead class="table-secondary">
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Details</th>
                   </tr>
                 </thead>
-                <tbody class="table-warning" *ngFor = "let details of data">
+                
+                <tbody class="table-warning" *ngIf="details.formtype=='credit'">
+                  
                   <tr>
                     <th scope="row">Name</th>
                     <td>{{details.Name}}</td>
@@ -32,10 +35,33 @@
                     <td colspan="2">{{details.CVV}}</td>
 
                   </tr>
-                  <tr></tr>
-                </tbody>
+                  <tr></tr></tbody>
+                  <tbody class="table-warning" *ngIf="details.formtype=='passport'">
+                  <!-- <div *ngIf="details.formtype=='passport'"> -->
+                    <tr>
+                      <th scope="row">Name</th>
+                      <td>{{details.fullName}}</td>
+  
+                    </tr>
+                    <tr>
+                      <th scope="row">Card Number</th>
+                      <td>{{details.DOB}}</td>
+  
+                    </tr>
+                    <tr>
+                      <th scope="row">Valid Thru</th>
+                      <td>{{details.passportNo}}</td>
+  
+                    </tr>
+                    <tr>
+                      <th scope="row">CVV</th>
+                      <td >{{details.dateOfIssue}}</td>
+  
+                    </tr>
+                    <tr></tr></tbody>
+                  </div>
               </table>
-          <button class="w3-button w3-block " [routerLink]="['/Home']"><i class='fas fa-angle-right'></i> Continue</button>
+          <button class="w3-button w3-block " [routerLink]="['/Forms']"><i class='fas fa-angle-right'></i> Continue</button>
         </div>
       </div>
   </div>

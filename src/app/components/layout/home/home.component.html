@@ -16,10 +16,71 @@
             <h3>AUTO-FILL FORMS</h3>
         </div>
         <div class="card-body" >
-          <h5 class="card-title">CLICK CONTINUE TO PROCEED</h5><br>
-          <p class="card-text"><img src="./../../../../assets/img/icons8-tap-gesture.gif"  style="width:60px"></p>
-          <button class="w3-button w3-block " [routerLink]="['/Forms']"><i class='fas fa-angle-right'></i> Continue</button>
+          <div *ngIf="loginform">
+          <h5 class="card-title">Login Page</h5><br>
+          <form [formGroup]="LoginForm">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+            <input type="text" class="form-control" placeholder="Username" formControlName="id" aria-label="id" aria-describedby="basic-addon1">
+          </div>
+          <div
+          *ngIf="LoginForm.get('id')?.invalid && (LoginForm.get('id')?.dirty || LoginForm.get('id')?.touched)  ">
+          <div *ngIf="LoginForm.get('id')?.errors?.required "><span style="font-size: 12px; color: red;">id is
+              required.</span> </div>
         </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input type="password" class="form-control" placeholder="Password" formControlName="password" aria-label="password" aria-describedby="basic-addon1">
+          </div>
+          <div
+          *ngIf="LoginForm.get('password')?.invalid && (LoginForm.get('password')?.dirty || LoginForm.get('password')?.touched)  ">
+          <div *ngIf="LoginForm.get('password')?.errors?.required "><span style="font-size: 12px; color: red;">Password is
+              required.</span> </div>
+        </div>
+          <!-- <h5 class="card-title">CLICK CONTINUE TO PROCEED</h5><br> -->
+          <div>
+            <p style="float: left; padding-bottom: 10px; cursor: pointer;" (click)="changeform('Signup')">Sign up</p>
+          </div>
+          <button class="w3-button w3-block " (click)="login()"><img src="./../../../../assets/img/icons8-tap-gesture.gif"  style="width:30px"> Login</button>
+        </form></div>
+        <div *ngIf="SignUp">
+          <h5 class="card-title">Sign-up Page</h5><br>
+          <form [formGroup]="signUpForm">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+            <input type="text" class="form-csignUpFormontrol" placeholder="Username" formControlName="id" aria-label="id" aria-describedby="basic-addon1">
+          </div>
+          <div
+          *ngIf="signUpForm.get('id')?.invalid && (signUpForm.get('id')?.dirty || signUpForm.get('id')?.touched)  ">
+          <div *ngIf="signUpForm.get('id')?.errors?.required "><span style="font-size: 12px; color: red;">id is
+              required.</span> </div>
+        </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input type="password" class="form-control" placeholder="Password" formControlName="password" aria-label="password" aria-describedby="basic-addon1">
+          </div>
+          <div
+          *ngIf="signUpForm.get('password')?.invalid && (signUpForm.get('password')?.dirty || signUpForm.get('password')?.touched)  ">
+          <div *ngIf="signUpForm.get('password')?.errors?.required "><span style="font-size: 12px; color: red;">Password is
+              required.</span> </div>
+        </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Confirm Password</span>
+            <input type="password" class="form-control" placeholder="Confirm Password" formControlName="confirmpassword" aria-label="confirmpassword" aria-describedby="basic-addon1">
+          </div>
+          <div
+          *ngIf="signUpForm.get('confirmpassword')?.invalid && (signUpForm.get('confirmpassword')?.dirty || signUpForm.get('confirmpassword')?.touched)  ">
+          <div *ngIf="signUpForm.get('confirmpassword')?.errors?.required "><span style="font-size: 12px; color: red;"> Confirm Password is
+              required.</span> </div>
+        </div>
+          <!-- <h5 class="card-title">CLICK CONTINUE TO PROCEED</h5><br> -->
+          <div>
+            <p style="float: left; padding-bottom: 10px; cursor: pointer;" (click)="changeform('login')">Login</p>
+          </div>
+          <button class="w3-button w3-block " (click)="proceedSignup()"><img src="./../../../../assets/img/icons8-tap-gesture.gif"  style="width:30px"> Sign-up</button>
+        </form>
+        </div>
+        </div>
+
       </div>
   </div>
-2
