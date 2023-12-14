@@ -12,7 +12,7 @@
       </div>
 
 
-      <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;">
+      <div style="position: fixed; margin-left: 40%; padding: initial; margin-top: 2%;" [hidden]="creditCard==false && passport==false">
         <button type="button" style="padding: 50px;" class="btn btn-warning" (click)="takePicture(CameraModal)"><i
             class="fa fa-camera" aria-hidden="true"></i><br>Camera</button><br>
         <input type="file" accept=".jpg,.png" class="button" (change)="onFileSelected($event)"
