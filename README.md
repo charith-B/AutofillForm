@@ -13,52 +13,64 @@ CPS 595 - P1, Spring 2023
 
 Instructor(s):
 
-- Ahmed El Ouadrhiri
+- Dr. Ahmed El Ouadrhiri
 - Dr. Phu Phung 
 
+# Company Mentors
 
-##  Collaborating Project with Synchrony
+Arpan Bhattacharya
+Synchrony
 
-
-# Auto-Fill Forms
-
+##  Project Title : Online Auto-Fill Forms Using Images
 
 # Team members
 
 1.  Charith Boddu , bodduc1@udayton.edu
 
+## Table of contents:
+
+| S.no | Description |
+| --- | --- |
+|1 | Project Management Information |
+|2 | Overview |
+|3 | Project Context and Scope |
+|4 | Environment Setup |
+|5 | Project files Descriptions |
+|6 |  System Design |
+|7 | Description |
+|8 | Demo |
 
 
-# Company Mentors
 
-Arpan Bhattacharya
-
-Synchrony
-
-
-
-# Project Management Information
+#  Project Management Information
 
 Source code repository (private access): https://github.com/charith-B/AutofillForm.git
 
 Power-point presentation: https://www.canva.com/design/DAFc0O8X960/TJGVTa15g3iiFY5Y52OHYw/edit?utm_content=DAFc0O8X960&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-# Overview
+Project TimeSheet: https://1drv.ms/x/s!Aln4QU2sXfSYgvgnYMEqwJZjizvb_A?e=aKfe3K
+
+#  Overview
 
 AutoFill Forms
-Project Requirement: Develop an autofill capability for a web page based on a scanned document. 
+Project Requirement: Develop an autofill capability for a web page based on a scanned Image. 
 
 Functionalities:
-The application should be allowed to access the camera to capture or extract key information from an uploaded document (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
+The application should be allowed to access the camera to capture or extract key information from an uploaded Image (ex: driver license, credit cards etc.) and auto fill information on the targeted form.
+
 Any additional or unmapped fields should be made available for the user to manually enter.
 
 
-# Project Context and Scope
+#  Project Context and Scope
 
-We see similar functionalities on Different platforms either while uploading your credit card details or while verifing your ID verification on diffferent situations. 
-The functionality is mainly for user convinience where the system can automatically detect and upload data without any manual entry.
+*	This project could be useful in simplifying and streamlining the process of filling out online forms, by leveraging technology to automatically extract text from images and populate the corresponding form fields.This could save time, reduce errors, and provide a more convenient and accessible way for users to complete online forms
 
-# Environment Setup
+* The Autofill Forms project is a web-based application, that allows users to quickly and easily fill out online forms. It extracts text from a picture and automatically populating the form fields with the extracted information.
+
+* The application would allow users to take a picture of a document, and use optical character recognition (OCR) technology to extract the text from the image. Then extracted text is used to automatically fill in the corresponding fields in the online form.
+ 
+
+#  Environment Setup
 
 * First step is to Install  Node.js  from the link  ===>   https://nodejs.org/en/download/
 
@@ -97,7 +109,7 @@ The functionality is mainly for user convinience where the system can automatica
 ![Hosting  project](src/assets/img/image-ref/host-project.png  )
 
 
-# Project files Descriptions:
+#  Project files Descriptions:
 
 * node modules:
 
@@ -128,7 +140,7 @@ The functionality is mainly for user convinience where the system can automatica
      This file is important for ensuring that TypeScript is compiling your code correctly and providing you with the desired outputs. It helps ensure consistency in your code by enforcing certain coding standards and practices.
      It also helps with debugging, as errors will be caught at compile-time rather than at runtime. Overall, the tsconfig.json file plays a crucial role in helping Angular projects maintain quality and maintainable code.
      
-# System Design
+#  System Design
 
 * Project Flow diagram
 
@@ -146,7 +158,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 
-  # Description:
+  #  Description:
   
   * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
     to proceed forward.
@@ -159,7 +171,7 @@ The functionality is mainly for user convinience where the system can automatica
 
 
 
-# Structure
+#  Demo
 
 * Home component :
 
@@ -190,7 +202,7 @@ The functionality is mainly for user convinience where the system can automatica
       
 ![Review component](src/assets/img/image-ref/Review-component.png  )
 
-* Short Demo:
+* Short Video Demo:
 
     Click on the Image to Redirect to the youtube video
     
