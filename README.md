@@ -1,6 +1,6 @@
 # PROJECT REPORT
 
-# CPS 595 - P1
+ CPS	596 - Z1
 
 Source: 
 
@@ -8,18 +8,12 @@ University of Dayton
 
 Department of Computer Science
 
-CPS 595 - P1, Spring 2023
+CPS	596 - Z1,Summer 2023
 
 
 Instructor(s):
 
-- Dr. Ahmed El Ouadrhiri
-- Dr. Phu Phung 
-
-# Company Mentors
-
-Arpan Bhattacharya
-Synchrony
+- James Buckley
 
 ##  Project Title : Online Auto-Fill Forms Using Images
 
@@ -108,6 +102,8 @@ Any additional or unmapped fields should be made available for the user to manua
 
 ![Hosting  project](src/assets/img/image-ref/host-project.png  )
 
+* Now open a new terminal and enter ==>'json-server --watch db.json' to run the backend server that accepts Json requests.
+
 
 #  Project files Descriptions:
 
@@ -160,8 +156,7 @@ Any additional or unmapped fields should be made available for the user to manua
 
   #  Description:
   
-  * After the Project is deployed the the first component that executes is the Home component in which the user has only one button to press "Continue" 
-    to proceed forward.
+  * After the Project is deployed the the first component that executes is the Home component in which the user has to login or create a new user credetils to login securely by clicking on the signup button. Then once the user has proper login credentials the user can login as a authorised user.
     
   * Then that leads us to the Forms component where the user can either manually enter the form data or can choose to click on the "Camera" button to use the auto-fill        feature.
  
@@ -175,18 +170,20 @@ Any additional or unmapped fields should be made available for the user to manua
 
 * Home component :
 
-			Initial page that is loaded when the project is hosted. Only has a continue button to redirect to the forms page
+			Initial page that is loaded when the project is hosted. User can log in or sign up if its a new user then login to their account
       
 ![Home component](src/assets/img/image-ref/home-component.png  )
 
 
 * Forms component: 
 
-			The fields for the form are listed out here with vaidations. 
+			here the user can select the form that he is going to upload using autofill feature. The fields for the form are listed out here with vaidations. 
                A button on the right of the forms with a camera icon by clicking on will redirect to a new window to Camera component.
                Another button for submitting the form values.
       
 ![Form component](src/assets/img/image-ref/Forms-component.png  )
+![Credit card Form ](src/assets/img/image-ref/creditform.png  )
+![Passport Form](src/assets/img/image-ref/passport-form.png  )
 
                      
 * Camera component: 
@@ -206,7 +203,7 @@ Any additional or unmapped fields should be made available for the user to manua
 
     Click on the Image to Redirect to the youtube video
     
-[![ Youtube Demo Video](src/assets/img/image-ref/youtube_video_thumbnail.png  ) ](https://youtu.be/y2JQiFeS2_g) 
+[![ Youtube Demo Video](src/assets/img/image-ref/youtube_video_thumbnail.png  ) ](https://youtu.be/u9elN-NXHeA) 
 
 
 

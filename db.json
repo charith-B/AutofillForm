@@ -1,8 +1,28 @@
 {
   "user": [
-
+    {
+      "id": "charith",
+      "password": "boddu",
+      "confirmpassword": "boddu"
+    },
+    {
+      "id": "charith123",
+      "password": "boddu",
+      "confirmpassword": "boddu"
+    }
   ],
   "details": [
+    {
+      "CardNumber": "6011007188464407",
+      "Name": [
+        "KIRANREDDY ANGALI"
+      ],
+      "selectedMonth": 7,
+      "selectedDay": 27,
+      "CVV": "370",
+      "formtype": "credit",
+      "id": 1
+    }
 
   ]
 }
